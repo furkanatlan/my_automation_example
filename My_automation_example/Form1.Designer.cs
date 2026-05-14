@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_listele = new System.Windows.Forms.Button();
+            this.btn_ekle = new System.Windows.Forms.Button();
+            this.btn_guncelle = new System.Windows.Forms.Button();
+            this.btn_sil = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_isim = new System.Windows.Forms.TextBox();
+            this.txt_soyisim = new System.Windows.Forms.TextBox();
+            this.txt_email = new System.Windows.Forms.TextBox();
+            this.txt_telefon = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -54,41 +54,43 @@
             this.dataGridView1.Size = new System.Drawing.Size(837, 318);
             this.dataGridView1.TabIndex = 0;
             // 
-            // button1
+            // btn_listele
             // 
-            this.button1.Location = new System.Drawing.Point(213, 361);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 42);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "LİSTELE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_listele.Location = new System.Drawing.Point(213, 361);
+            this.btn_listele.Name = "btn_listele";
+            this.btn_listele.Size = new System.Drawing.Size(93, 42);
+            this.btn_listele.TabIndex = 1;
+            this.btn_listele.Text = "LİSTELE";
+            this.btn_listele.UseVisualStyleBackColor = true;
+            this.btn_listele.Click += new System.EventHandler(this.btn_listele_Click);
             // 
-            // button2
+            // btn_ekle
             // 
-            this.button2.Location = new System.Drawing.Point(334, 361);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 42);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "EKLE";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_ekle.Location = new System.Drawing.Point(334, 361);
+            this.btn_ekle.Name = "btn_ekle";
+            this.btn_ekle.Size = new System.Drawing.Size(93, 42);
+            this.btn_ekle.TabIndex = 2;
+            this.btn_ekle.Text = "EKLE";
+            this.btn_ekle.UseVisualStyleBackColor = true;
+            this.btn_ekle.Click += new System.EventHandler(this.btn_ekle_Click);
             // 
-            // button3
+            // btn_guncelle
             // 
-            this.button3.Location = new System.Drawing.Point(465, 361);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 42);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "GÜNCELLE";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_guncelle.Location = new System.Drawing.Point(465, 361);
+            this.btn_guncelle.Name = "btn_guncelle";
+            this.btn_guncelle.Size = new System.Drawing.Size(93, 42);
+            this.btn_guncelle.TabIndex = 3;
+            this.btn_guncelle.Text = "GÜNCELLE";
+            this.btn_guncelle.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_sil
             // 
-            this.button4.Location = new System.Drawing.Point(585, 361);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 42);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "SİL";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_sil.Location = new System.Drawing.Point(585, 361);
+            this.btn_sil.Name = "btn_sil";
+            this.btn_sil.Size = new System.Drawing.Size(93, 42);
+            this.btn_sil.TabIndex = 4;
+            this.btn_sil.Text = "SİL";
+            this.btn_sil.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -126,42 +128,42 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "label4";
             // 
-            // textBox1
+            // txt_isim
             // 
-            this.textBox1.Location = new System.Drawing.Point(192, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 20);
-            this.textBox1.TabIndex = 9;
+            this.txt_isim.Location = new System.Drawing.Point(192, 34);
+            this.txt_isim.Name = "txt_isim";
+            this.txt_isim.Size = new System.Drawing.Size(177, 20);
+            this.txt_isim.TabIndex = 9;
             // 
-            // textBox2
+            // txt_soyisim
             // 
-            this.textBox2.Location = new System.Drawing.Point(192, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(177, 20);
-            this.textBox2.TabIndex = 10;
+            this.txt_soyisim.Location = new System.Drawing.Point(192, 83);
+            this.txt_soyisim.Name = "txt_soyisim";
+            this.txt_soyisim.Size = new System.Drawing.Size(177, 20);
+            this.txt_soyisim.TabIndex = 10;
             // 
-            // textBox3
+            // txt_email
             // 
-            this.textBox3.Location = new System.Drawing.Point(192, 133);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(177, 20);
-            this.textBox3.TabIndex = 11;
+            this.txt_email.Location = new System.Drawing.Point(192, 133);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(177, 20);
+            this.txt_email.TabIndex = 11;
             // 
-            // textBox4
+            // txt_telefon
             // 
-            this.textBox4.Location = new System.Drawing.Point(192, 184);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(177, 20);
-            this.textBox4.TabIndex = 12;
+            this.txt_telefon.Location = new System.Drawing.Point(192, 184);
+            this.txt_telefon.Name = "txt_telefon";
+            this.txt_telefon.Size = new System.Drawing.Size(177, 20);
+            this.txt_telefon.TabIndex = 12;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txt_isim);
+            this.groupBox1.Controls.Add(this.txt_telefon);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txt_email);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txt_soyisim);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(31, 430);
@@ -177,13 +179,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1157, 673);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_sil);
+            this.Controls.Add(this.btn_guncelle);
+            this.Controls.Add(this.btn_ekle);
+            this.Controls.Add(this.btn_listele);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -194,18 +197,18 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_listele;
+        private System.Windows.Forms.Button btn_ekle;
+        private System.Windows.Forms.Button btn_guncelle;
+        private System.Windows.Forms.Button btn_sil;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_isim;
+        private System.Windows.Forms.TextBox txt_soyisim;
+        private System.Windows.Forms.TextBox txt_email;
+        private System.Windows.Forms.TextBox txt_telefon;
         private System.Windows.Forms.GroupBox groupBox1;
     }
 }
