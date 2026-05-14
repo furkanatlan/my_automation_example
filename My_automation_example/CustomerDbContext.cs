@@ -14,6 +14,10 @@ namespace My_automation_example
 
         }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<CustomerProduct> CustomerProducts { get; set; }
+
 
     }
 }

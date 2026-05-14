@@ -32,5 +32,8 @@ namespace My_automation_example
         [MaxLength(50)]
         public string Customer_telephone { get; set; }
 
+        public virtual ICollection<CustomerProduct> CustomerProducts { get; set; }
+
+
     }
 }
