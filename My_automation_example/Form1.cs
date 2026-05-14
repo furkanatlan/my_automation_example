@@ -78,5 +78,53 @@ namespace My_automation_example
             }
 
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                txt_isim.Text = dataGridView1.Rows[e.RowIndex].Cells["Customer_Name"].Value.ToString();
+                txt_soyisim.Text = dataGridView1.Rows[e.RowIndex].Cells["Customer_Surname"].Value.ToString();
+                txt_email.Text = dataGridView1.Rows[e.RowIndex].Cells["Customer_Email"].Value.ToString();
+                txt_telefon.Text = dataGridView1.Rows[e.RowIndex].Cells["Customer_Telephone"].Value.ToString();
+            }
+
+        }
+
+        private void btn_guncelle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView1.CurrentRow != null)
+                {
+                    int selectedId = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Customer_Id"].Value);
+                    Customer customer = db.Customers.Find(selectedId);
+
+                    if (customer != null)
+                    {
+                        customer.Customer_Name = txt_isim.Text;
+                        customer.Customer_Surname = txt_soyisim.Text;
+                        customer.Customer_email = txt_email.Text;
+                        customer.Customer_telephone = txt_telefon.Text;
+
+                        db.SaveChanges();
+                        MessageBox.Show("Müşteri güncellendi!");
+                        btn_listele.PerformClick();
+
+
+                    }
+
+                }
+                {
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show($"Hata = {ex.Message}");
+            }
+
+        }
     }
 }

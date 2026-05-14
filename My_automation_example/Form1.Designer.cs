@@ -53,6 +53,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(837, 318);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btn_listele
             // 
@@ -82,6 +83,7 @@
             this.btn_guncelle.TabIndex = 3;
             this.btn_guncelle.Text = "GÜNCELLE";
             this.btn_guncelle.UseVisualStyleBackColor = true;
+            this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
             // 
             // btn_sil
             // 
