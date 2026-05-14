@@ -126,5 +126,43 @@ namespace My_automation_example
             }
 
         }
+
+        private void btn_sil_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult sonuc = MessageBox.Show(
+                            "Silmek istediğinize emin misiniz?",
+                            "Silme Onayı",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question);
+
+                if (sonuc == DialogResult.Yes)
+                {
+                    if (dataGridView1.CurrentRow != null)
+                    {
+                        int selectedId = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Customer_Id"].Value);
+                        Customer customer = db.Customers.Find(selectedId);
+                        if (customer != null)
+                        {
+                            db.Customers.Remove(customer);
+                            db.SaveChanges();
+                            MessageBox.Show("Müşteri Silindi!");
+                            btn_listele.PerformClick();
+
+                        }
+                    }
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show($"Hata = {ex.Message}");
+            }
+
+        }
     }
 }

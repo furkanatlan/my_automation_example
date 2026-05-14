@@ -93,6 +93,7 @@
             this.btn_sil.TabIndex = 4;
             this.btn_sil.Text = "SİL";
             this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
             // label1
             // 
